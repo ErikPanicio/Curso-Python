@@ -9,12 +9,17 @@ while True:
     numeros.append(int(input('Digite um número:')))
     resposta = str(input('Deseja continuar? [S/N]:').upper())
     if resposta == 'N':
+        for c in range(0, len(numeros)):
+            if numeros[c] % 2 == 0:
+                pares.append(numeros[c])
+            if numeros[c] % 2 == 1:
+                impares.append(numeros[c])
         break
-for c in range(0, len(numeros)):
-    if numeros[c] % 2 == 0:
-        pares.append(numeros[c])
-    if numeros[c] % 2 == 1:
-        impares.append(numeros[c])
+    if resposta != 'S' and resposta != 'N':             #caso o valor seja digitado errado, quero que o usuário possa digitar novamente
+        print('Valor digitado errado!\nDigite novamente:')
+
+
+
 
 print(f'Números: {numeros}\nPares: {pares}\nÍmpares: {impares}')
 
