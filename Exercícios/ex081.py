@@ -8,12 +8,16 @@ cont = 0
 while True:
     numeros.append(int(input('Digite um número:')))
     continuar = str(input('Deseja Continuar? [S/N]:').upper())
-    cont = cont + 1
-    numeros.sort(reverse=True)
-    if continuar == 'N':
-        break
-    if 5 in numeros:
-        cinco = 'O número cinco está na lista!'
+    if continuar != 'S' and continuar != 'N':
+        print('Valor digitado errado!')
+        del numeros[-1]
     else:
-        cinco = 'O número cinco não está na lista!'
+        cont = cont + 1
+        if continuar == 'N':
+            break
+        if 5 in numeros:
+            cinco = 'O número cinco está na lista!'
+        else:
+            cinco = 'O número cinco não está na lista!'
+numeros.sort(reverse=True)
 print(f'Foram digitados {cont} números\nOs números são: {numeros}\n{cinco}')
