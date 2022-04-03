@@ -1,10 +1,9 @@
 '''Faça um programa que ajude um jogador da MEGA SENA a criar palpites. O programa vai perguntar quantos jogos serão gerados e vai sortear
-6 números entre 1 e 60 para cada jogo, cadastando tudo em uma lista composta (os números não podem se repetir).'''
+6 números entre 1 e 60 para cada jogo, cadastando tudo em uma lista composta (os números não podem se repetir)'''
 
 from random import randint
 
 lista = []
-lista_organizada = []
 jogos = int(input("Quantos jogos serão jogados?:"))
 
 for c in range(0, jogos):
